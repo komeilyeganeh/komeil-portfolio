@@ -1,65 +1,58 @@
-import Image from "next/image";
+import { ThemeToggle } from "@/components/themeToggle/ThemeToggle";
+import { LeftColumn } from "@/components/layout/LeftCol";
+import { RightColumn } from "@/components/layout/RightCol";
 
 export default function Home() {
+  // ***** return jsx *****
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="min-h-screen bg-white dark:bg-slate-950 relative overflow-hidden">
+      {/* Geometric background shapes - white and red theme */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-20 left-10 w-96 h-96 rounded-full bg-linear-to-r from-red-50/50 to-red-100/50 dark:from-red-900/10 dark:to-red-800/10 blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-125 h-125 rounded-full bg-linear-to-l from-red-50/50 to-red-100/50 dark:from-red-900/10 dark:to-red-800/10 blur-3xl" />
+
+        <div className="absolute top-40 right-40 w-0 h-0 border-l-150 border-l-transparent border-b-260 border-b-red-100/30 dark:border-b-red-900/10 border-r-150 border-r-transparent rotate-12" />
+        <div className="absolute bottom-40 left-40 w-0 h-0 border-l-200 border-l-transparent border-b-346 border-b-red-100/30 dark:border-b-red-900/10 border-r-200 border-r-transparent -rotate-12" />
+
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 border-2 border-red-100/50 dark:border-red-800/10 rotate-45 rounded-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 border-2 border-red-100/50 dark:border-red-800/10 rotate-12 rounded-2xl" />
+
+        <svg className="absolute inset-0 w-full h-full">
+          <pattern
+            id="dot-pattern"
+            x="0"
+            y="0"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            <circle
+              cx="2"
+              cy="2"
+              r="1"
+              fill="currentColor"
+              className="text-red-200/30 dark:text-red-800/10"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+        </svg>
+      </div>
+
+      {/* Theme toggle */}
+      <div className="fixed top-6 right-6 z-50">
+        <div className="bg-white dark:bg-slate-900 border border-red-200 dark:border-red-800/30 rounded-full shadow-sm overflow-hidden">
+          <ThemeToggle />
         </div>
-      </main>
+      </div>
+
+      {/* Main layout - Two column */}
+      <div className="flex flex-col lg:flex-row min-h-screen">
+        {/* Left column - Fixed profile */}
+        <LeftColumn />
+
+        {/* Right column - Scrollable content */}
+        <RightColumn />
+      </div>
     </div>
   );
 }

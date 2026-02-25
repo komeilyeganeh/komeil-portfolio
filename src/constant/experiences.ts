@@ -1,0 +1,87 @@
+import { ExperienceType } from "@/types/experience.types";
+
+export const EXPERIENCES_DATA: ExperienceType[] = [
+  {
+    id: 1,
+    title: "Senior Frontend Developer",
+    company: "Futurewaves",
+    location: "London Area, United Kingdom (Remote)",
+    period: "2022 - Present",
+    description:
+      "Developing and maintaining large-scale enterprise applications including ERP systems, admin panels, e-commerce platforms, and TRPOS system. Leveraging modern frontend technologies and AI tools to accelerate development and deliver high-quality solutions.",
+    achievements: [
+      "Developed TRPOS system, a comprehensive POS solution for retail chains, handling 1000+ daily transactions with real-time inventory management",
+      "Architected and built multiple enterprise admin panels and ERP modules, reducing manual data entry by 60% and improving operational efficiency",
+      "Designed and implemented scalable e-commerce platforms with complex product catalogs, shopping cart systems, and payment integrations",
+      "Integrated AI tools (GitHub Copilot, ChatGPT) into development workflow, accelerating feature delivery by 30%",
+      "Collaborated with cross-functional teams using Git and GitHub for version control and code review processes",
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Zustand",
+      "Tailwind CSS",
+      "Shadcn-ui",
+      "Git",
+      "GitHub",
+      "Azure DevOps",
+      "AI Tools",
+    ],
+  },
+  {
+    id: 2,
+    title: "Course Mentor",
+    company: "Quera",
+    location: "Tehran, Iran (Remote)",
+    period: "2020 - 2021",
+    description:
+      "Provided technical mentorship and guidance to students in both frontend and backend development courses. Assisted learners with course-related questions, problem-solving, and debugging challenges to help them master web development concepts.",
+    achievements: [
+      "Mentored 100+ students in frontend development (HTML, CSS, JavaScript, Bootstrap) and backend development (PHP, Laravel), helping them overcome coding challenges",
+      "Answered 500+ technical questions in course forums and messaging platforms, with 95% positive feedback from students",
+      "Guided students through complex problem-solving sessions, helping them debug code and understand core programming concepts",
+      "Contributed to improving course materials by identifying common student pain points and suggesting curriculum enhancements",
+      "Supported students in building their first web applications, from simple static sites to dynamic PHP-based projects",
+      "Conducted live coding sessions and Q&A meetings to address student questions in real-time",
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "PHP",
+      "Laravel",
+      "Problem Solving",
+      "Debugging",
+      "Technical Mentoring",
+    ],
+  },
+  {
+    id: 3,
+    title: "Frontend Developer Intern",
+    company: "Arpaco",
+    location: "Isfahan, Iran (On-site)",
+    period: "2019 - 2020",
+    description:
+      "Started professional career as a frontend intern, building real-world websites and gaining hands-on experience with core web technologies. Collaborated with senior developers to create responsive and user-friendly interfaces for various business clients.",
+    achievements: [
+      "Designed and developed 10+ responsive websites from scratch using HTML, CSS, and JavaScript, including a greenhouse management site and multiple corporate business websites",
+      "Created a complete company portfolio website for a local construction firm, which increased their client inquiries by 30%",
+      "Collaborated with the design team to implement pixel-perfect layouts based on Figma mockups",
+      "Participated in daily stand-ups and code reviews, learning industry best practices and version control workflows",
+      "Maintained and updated existing client websites, fixing bugs and implementing minor feature requests",
+      "Gained foundational knowledge of responsive design principles, ensuring optimal viewing across all devices",
+      "Received positive feedback from mentors for quick learning and attention to detail in implementing designs",
+    ],
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "VS Code",
+      "Git Basics",
+    ],
+  },
+];
