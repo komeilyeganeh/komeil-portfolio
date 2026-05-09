@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Download, Mail } from "lucide-react";
+import Link from "next/link";
 import { FC } from "react";
 
 export const ContactSection: FC = () => {
@@ -24,10 +25,10 @@ export const ContactSection: FC = () => {
             open to new opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full px-8 gap-2">
+            <Link href={`mailto:komeilyeganeh261@gmail.com`} className="flex items-center bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full px-8 gap-2">
               <Mail className="w-4 h-4" />
-              komeil.yeganeh@gmail.com
-            </Button>
+              komeilyeganeh261@gmail.com
+            </Link>
             <Button
               variant="outline"
               className="rounded-full px-8 gap-2 border-red-200 dark:border-red-800 bg-white dark:bg-transparent hover:bg-red-50 dark:hover:bg-red-950/30 text-gray-700 dark:text-white"

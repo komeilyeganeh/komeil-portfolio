@@ -24,7 +24,7 @@ export const RightColumn: FC = () => {
       <ExperienceSection />
 
       {/* Projects section */}
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
 
       {/* Contact section */}
       <ContactSection />

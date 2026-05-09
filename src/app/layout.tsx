@@ -11,7 +11,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Komeil Yeganeh",
+  title: "Komeil Yeganeh - Frontend Developer",
   description: "Frontend Developer & Software Engineer",
 };
 
