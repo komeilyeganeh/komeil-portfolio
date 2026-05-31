@@ -19,7 +19,7 @@ export const PassionSection: FC = () => {
               <Code2 className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Frontend Development
+              Senior Frontend Development
             </h3>
             <p className="text-gray-600 dark:text-slate-400 text-sm mb-4">
               Crafting responsive and performant interfaces with modern tools.

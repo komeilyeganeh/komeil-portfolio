@@ -61,7 +61,7 @@ export const ProfileCard: FC = () => {
         </div>
         <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
           <Briefcase className="w-4 h-4 text-red-500" />
-          <span className="text-sm">Frontend Developer</span>
+          <span className="text-sm">Senior Frontend Developer</span>
         </div>
         <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
           <GraduationCap className="w-4 h-4 text-red-500" />
