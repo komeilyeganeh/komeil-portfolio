@@ -10,7 +10,7 @@ import { Footer } from "./Footer";
 export const RightColumn: FC = () => {
   // ***** return jsx *****
   return (
-    <div className="lg:ml-[40%] lg:w-3/5 p-8 lg:p-12 space-y-16">
+    <div className="lg:ml-[40%] lg:w-3/5 p-3 lg:p-12 space-y-10">
       {/* About section */}
       <AboutSection />
 

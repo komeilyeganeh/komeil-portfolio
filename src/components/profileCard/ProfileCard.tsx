@@ -61,7 +61,7 @@ export const ProfileCard: FC = () => {
 
       {/* Name and title */}
       <div className="text-center mb-6">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-2">
           Komeil Yeganeh
         </h1>
         <Badge
@@ -74,7 +74,7 @@ export const ProfileCard: FC = () => {
       </div>
 
       {/* Bio */}
-      <p className="text-gray-600 dark:text-slate-400 text-center mb-6 leading-relaxed">
+      <p className="text-sm sm:text-base text-gray-600 dark:text-slate-400 text-center mb-6 leading-relaxed">
         Frontend Developer passionate about crafting elegant solutions and
         software engineering excellence.
       </p>
@@ -83,15 +83,15 @@ export const ProfileCard: FC = () => {
       <div className="space-y-3 mb-8">
         <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
           <MapPin className="w-4 h-4 text-red-500" />
-          <span className="text-sm">Isfahan, Iran</span>
+          <span className="text-xs sm:text-sm md:text-base">Isfahan, Iran</span>
         </div>
         <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
           <Briefcase className="w-4 h-4 text-red-500" />
-          <span className="text-sm">Senior Frontend Developer</span>
+          <span className="text-xs sm:text-sm md:text-base">Senior Frontend Developer</span>
         </div>
         <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
           <GraduationCap className="w-4 h-4 text-red-500" />
-          <span className="text-sm">Software Engineering</span>
+          <span className="text-xs sm:text-sm md:text-base">Software Engineering</span>
         </div>
       </div>
 
