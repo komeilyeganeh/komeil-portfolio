@@ -1,7 +1,8 @@
-export const ABOUT_SUB_TITLE = `I'm a frontend developer at the intersection of elegant code and
-        artificial intelligence. I leverage AI tools and modern software
-        engineering practices to build intelligent, scalable applications that
-        anticipate user needs and deliver exceptional experiences.`;
+export const ABOUT_SUB_TITLE = `Frontend Developer with 4+ years of experience building scalable, production-ready applications using React,
+Next.js, and TypeScript. Specialized in writing unit and integration tests (Vitest + React Testing Library) and
+implementing CI/CD pipelines (GitHub Actions) to ensure code reliability. Experienced in state management (Redux,
+Zustand, Context API) and containerization with Docker. Proven track record of improving application performance
+and maintainability.`;
 
 export const SOFTWARE_ENGINEERING_SKILLS = [
   "Design Patterns",
@@ -25,10 +26,10 @@ export const FRONTEND_SKILLS = [
 export const TOOLS_WORKFLOW = [
   "Git",
   "GitHub",
-  "GitLab",
   "Docker",
   "VS Code",
-  "Jest",
+  "Vitest",
+  "React Testing Library",
   "Webpack",
   "Vite",
 ];

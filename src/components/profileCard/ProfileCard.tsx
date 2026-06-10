@@ -14,6 +14,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
+import { BASE_PATH } from "@/config";
 
 export const ProfileCard: FC = () => {
   // ***** return jsx *****
@@ -24,7 +25,7 @@ export const ProfileCard: FC = () => {
         <div className="absolute inset-0 bg-linear-to-r from-red-400 to-red-500 rounded-full blur-xl opacity-20 dark:opacity-30" />
         <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden ring-4 ring-white dark:ring-slate-800 shadow-md">
           <Image
-            src="/profile.jpg"
+            src={`${BASE_PATH}/profile.jpg`}
             alt="Komeil Yeganeh"
             fill
             className="object-cover"
@@ -101,10 +102,12 @@ export const ProfileCard: FC = () => {
       </div>
 
       {/* Resume button */}
-      <Button className="w-full bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full gap-2">
-        <Download className="w-4 h-4" />
-        Download Resume
-      </Button>
+      <Link href={`${BASE_PATH}/resume.pdf`} download>
+        <Button className="w-full bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full gap-2">
+          <Download className="w-4 h-4" />
+          Download Resume
+        </Button>
+      </Link>
     </div>
   );
 };
