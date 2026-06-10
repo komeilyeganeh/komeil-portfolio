@@ -1,3 +1,4 @@
+"use client"
 import { FC } from "react";
 import { Button } from "../ui/button";
 import {
@@ -17,6 +18,30 @@ import { Badge } from "../ui/badge";
 import { BASE_PATH } from "@/config";
 
 export const ProfileCard: FC = () => {
+  const handleDownload = async () => {
+  try {
+    const pdfUrl = `${BASE_PATH}/resume.pdf`;
+  
+    const response = await fetch(pdfUrl);
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Download error:', error);
+    window.open(`${BASE_PATH}/resume.pdf`, '_blank');
+  }
+};
   // ***** return jsx *****
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-red-100 dark:border-red-800/30 shadow-sm">
@@ -102,12 +127,10 @@ export const ProfileCard: FC = () => {
       </div>
 
       {/* Resume button */}
-      <Link href={`${BASE_PATH}/resume.pdf`} download>
-        <Button className="w-full bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full gap-2">
+        <Button onClick={handleDownload} className="w-full bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full gap-2">
           <Download className="w-4 h-4" />
           Download Resume
         </Button>
-      </Link>
     </div>
   );
 };
