@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   output: "export",
-  basePath: "komeil-portfolio"
+  basePath: "/komeil-portfolio",
+  assetPrefix: "/komeil-portfolio/",
 };
 
 export default nextConfig;
