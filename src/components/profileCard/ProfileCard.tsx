@@ -1,16 +1,14 @@
-"use client"
+"use client";
 import { FC } from "react";
 import { Button } from "../ui/button";
 import {
   Briefcase,
   Download,
   Github,
-  GraduationCap,
   Linkedin,
   Mail,
   MapPin,
   Sparkles,
-  Twitter,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,29 +17,29 @@ import { BASE_PATH } from "@/config";
 
 export const ProfileCard: FC = () => {
   const handleDownload = async () => {
-  try {
-    const pdfUrl = `${BASE_PATH}/resume.pdf`;
-  
-    const response = await fetch(pdfUrl);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+    try {
+      const pdfUrl = `${BASE_PATH}/resume.pdf`;
+
+      const response = await fetch(pdfUrl);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download error:", error);
+      window.open(`${BASE_PATH}/resume.pdf`, "_blank");
     }
-    
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
-  } catch (error) {
-    console.error('Download error:', error);
-    window.open(`${BASE_PATH}/resume.pdf`, '_blank');
-  }
-};
+  };
   // ***** return jsx *****
   return (
     <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-red-100 dark:border-red-800/30 shadow-sm">
@@ -69,14 +67,14 @@ export const ProfileCard: FC = () => {
           className="bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 border-red-200 dark:border-red-800"
         >
           <Sparkles className="w-3 h-3 mr-1" />
-          Available for work
+          Open to Software Engineer Opportunities
         </Badge>
       </div>
 
       {/* Bio */}
       <p className="text-sm sm:text-base text-gray-600 dark:text-slate-400 text-center mb-6 leading-relaxed">
-        Frontend Developer passionate about crafting elegant solutions and
-        software engineering excellence.
+        Software Engineer building modern web applications and AI-powered
+        products with React, NestJS, TypeScript and LangChain.
       </p>
 
       {/* Location and info */}
@@ -87,11 +85,9 @@ export const ProfileCard: FC = () => {
         </div>
         <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
           <Briefcase className="w-4 h-4 text-red-500" />
-          <span className="text-xs sm:text-sm md:text-base">Senior Frontend Developer</span>
-        </div>
-        <div className="flex items-center gap-3 text-gray-600 dark:text-slate-400">
-          <GraduationCap className="w-4 h-4 text-red-500" />
-          <span className="text-xs sm:text-sm md:text-base">Software Engineering</span>
+          <span className="text-xs sm:text-sm md:text-base">
+            Software Engineer
+          </span>
         </div>
       </div>
 
@@ -127,10 +123,13 @@ export const ProfileCard: FC = () => {
       </div>
 
       {/* Resume button */}
-        <Button onClick={handleDownload} className="w-full bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full gap-2">
-          <Download className="w-4 h-4" />
-          Download Resume
-        </Button>
+      <Button
+        onClick={handleDownload}
+        className="w-full bg-red-500 hover:bg-red-600 dark:bg-linear-to-r dark:from-red-500 dark:to-red-600 dark:hover:from-red-600 dark:hover:to-red-700 text-white rounded-full gap-2"
+      >
+        <Download className="w-4 h-4" />
+        Download Resume
+      </Button>
     </div>
   );
 };

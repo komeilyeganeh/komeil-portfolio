@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { FRONTEND_SKILLS, SOFTWARE_ENGINEERING_SKILLS, TOOLS_WORKFLOW } from "@/constant/info";
-import { Cpu, Layers, Workflow } from "lucide-react";
+import { FRONTEND_SKILLS, BACKEND_SKILLS, TOOLS_WORKFLOW, AI_SKILLS } from "@/constant/info";
+import { Layers, Workflow } from "lucide-react";
 import { FC } from "react";
 
 export const SkillsSection: FC = () => {
@@ -10,7 +10,7 @@ export const SkillsSection: FC = () => {
     <section>
       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
         <span className="w-1 h-8 bg-red-500 rounded-full" />
-        Technical Skills
+        Tech Stack
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -37,17 +37,40 @@ export const SkillsSection: FC = () => {
           </CardContent>
         </Card>
 
-        {/* Engineering Skills */}
+        {/* Backend Skills */}
         <Card className="bg-white dark:bg-slate-900 border-red-100 dark:border-red-800/30">
           <CardContent className="p-6">
             <div className="flex items-center gap-2 mb-4">
-              <Cpu className="w-5 h-5 text-red-500" />
+              <Layers className="w-5 h-5 text-red-500" />
               <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 dark:text-white">
-                Engineering
+                Backend
               </h3>
             </div>
             <div className="flex flex-wrap gap-2">
-              {SOFTWARE_ENGINEERING_SKILLS.map((skill) => (
+              {BACKEND_SKILLS.map((skill) => (
+                <Badge
+                  key={skill}
+                  variant="secondary"
+                  className="bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-400 border-red-200 dark:border-red-800 text-xs sm:text-sm"
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* AI Skills */}
+        <Card className="bg-white dark:bg-slate-900 border-red-100 dark:border-red-800/30">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-2 mb-4">
+              <Layers className="w-5 h-5 text-red-500" />
+              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-gray-900 dark:text-white">
+                AI
+              </h3>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {AI_SKILLS.map((skill) => (
                 <Badge
                   key={skill}
                   variant="secondary"

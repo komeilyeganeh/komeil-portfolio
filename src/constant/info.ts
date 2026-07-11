@@ -1,35 +1,41 @@
-export const ABOUT_SUB_TITLE = `Frontend Developer with 4+ years of experience building scalable, production-ready applications using React,
-Next.js, and TypeScript. Specialized in writing unit and integration tests (Vitest + React Testing Library) and
-implementing CI/CD pipelines (GitHub Actions) to ensure code reliability. Experienced in state management (Redux,
-Zustand, Context API) and containerization with Docker. Proven track record of improving application performance
-and maintainability.`;
+export const ABOUT_SUB_TITLE = `Software Engineer with 4+ years of experience building modern web applications using React, Next.js, and TypeScript. Currently focused on backend engineering with NestJS, PostgreSQL, Prisma, and Docker, while building AI-powered applications using LangChain and OpenAI. Passionate about clean architecture, scalable systems, and delivering production-ready software.`;
 
-export const SOFTWARE_ENGINEERING_SKILLS = [
-  "Design Patterns",
-  "Clean Architecture",
-  "SOLID",
-  "TDD",
-  "DDD",
+export const BACKEND_SKILLS = [
+  "NestJS",
+  "Node.js",
+  "PostgreSQL",
+  "Prisma",
+  "MongoDB",
+  "REST API",
+  "JWT",
+  "Swagger",
 ];
 
 export const FRONTEND_SKILLS = [
-  "ReactJs",
+  "React",
   "Next.js",
-  "JavaScript",
   "TypeScript",
   "Tailwind CSS",
-  "HTML5",
-  "CSS3",
-  "Shadcn-ui",
+  "Redux",
+  "Zustand",
+  "Shadcn UI",
+  "Ant Design",
+];
+
+export const AI_SKILLS = [
+  "LangChain",
+  "OpenAI",
+  "LLM",
+  "Prompt Engineering",
+  "RAG",
+  "AI Agents",
 ];
 
 export const TOOLS_WORKFLOW = [
   "Git",
   "GitHub",
   "Docker",
+  "GitHub Actions",
   "VS Code",
-  "Vitest",
-  "React Testing Library",
-  "Webpack",
-  "Vite",
+  "Postman",
 ];

@@ -1,6 +1,4 @@
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { SOFTWARE_ENGINEERING_SKILLS } from "@/constant/info";
 import { BookOpen, Code2 } from "lucide-react";
 import { FC } from "react";
 
@@ -19,10 +17,10 @@ export const PassionSection: FC = () => {
               <Code2 className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Senior Frontend Development
+              Full Stack Development
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-slate-400 mb-4">
-              Crafting responsive and performant interfaces with modern tools.
+              Building scalable web applications with React, Next.js, NestJS, PostgreSQL and modern engineering practices.
             </p>
             
           </CardContent>
@@ -34,10 +32,10 @@ export const PassionSection: FC = () => {
               <BookOpen className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
-              Software Engineering
+               AI Engineering
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-slate-400 mb-4">
-              Passionate about clean code and scalable architectures.
+              Building AI-powered applications with LangChain, OpenAI and modern LLM workflows.
             </p>
           </CardContent>
         </Card>

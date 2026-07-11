@@ -3,7 +3,6 @@ import { AboutSection } from "../sections/about/About";
 import { PassionSection } from "../sections/passion/Passion";
 import { SkillsSection } from "../sections/skills/Skills";
 import { ExperienceSection } from "../sections/experience/Experience";
-import { ProjectsSection } from "../sections/projects/Projects";
 import { ContactSection } from "../sections/contact/Contact";
 import { Footer } from "./Footer";
 
@@ -17,7 +16,7 @@ export const RightColumn: FC = () => {
       {/* Passion cards */}
       <PassionSection />
 
-      {/* Skills section - بدون درصد */}
+      {/* Skills section */}
       <SkillsSection />
 
       {/* Experience section */}
