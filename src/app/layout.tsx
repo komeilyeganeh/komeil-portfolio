@@ -11,8 +11,9 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Komeil Yeganeh - Frontend Developer",
-  description: "Frontend Developer & Software Engineer",
+  title: "Komeil Yeganeh | Software Engineer",
+  description:
+    "Software Engineer building modern web applications with React, Next.js, NestJS, PostgreSQL, and AI-powered solutions using LangChain and OpenAI.",
 };
 
 export default function RootLayout({
@@ -22,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${plusJakarta.variable} antialiased`}
-      >
+      <body className={`${plusJakarta.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
